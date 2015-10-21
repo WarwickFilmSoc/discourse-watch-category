@@ -9,6 +9,10 @@ module ::WatchCategory
     groups_cats = {
       "exec": "exec",
       "exec": "shadow-exec",
+      "duty_managers": "duty-managers",
+      "q_proj": "proj",
+      "q_proj": "show-reports",
+      "t_proj": "show-reports"
     }
     
     groups_cats.each do |group_name, cat_slug|
