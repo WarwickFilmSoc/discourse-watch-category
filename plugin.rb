@@ -38,6 +38,7 @@ after_initialize do
       def execute(args)
         if SiteSettings.watching_enabled
           WatchCategory.watch_category!
+        end
       end
     end
   end
