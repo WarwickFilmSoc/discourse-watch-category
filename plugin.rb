@@ -36,7 +36,7 @@ after_initialize do
       every 1.day
 
       def execute(args)
-        if SiteSettings.watching_enabled
+        if SiteSetting.watching_enabled
           WatchCategory.watch_category!
         end
       end
