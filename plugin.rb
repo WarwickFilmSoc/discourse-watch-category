@@ -3,6 +3,7 @@
 # version: 0.2
 # authors: Arpit Jalan, Thomas Purchas
 # url: https://github.com/thomaspurchas/discourse-watch-category
+enabled_site_setting :watching_enabled
 
 module ::WatchCategory
   def self.watch_category!
@@ -35,7 +36,8 @@ after_initialize do
       every 1.day
 
       def execute(args)
-        WatchCategory.watch_category!
+        if SiteSettings.watching_enabled
+          WatchCategory.watch_category!
       end
     end
   end

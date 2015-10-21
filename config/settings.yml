@@ -1,0 +1,3 @@
+plugins:
+  watching_enabled:
+    default: true
