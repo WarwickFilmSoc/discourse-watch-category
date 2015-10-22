@@ -11,7 +11,8 @@ module ::WatchCategory
       "exec" => ["exec", "shadow-exec"],
       "duty_managers" => ["duty-managers"],
       "q_proj" => ["proj", "show-reports"],
-      "t_proj" => ["show-reports"]
+      "t_proj" => ["show-reports"],
+      "it_team" => ["it"],
     }
 
     groups_cats.each do |group_name, cats|
