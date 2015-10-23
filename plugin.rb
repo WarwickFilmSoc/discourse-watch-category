@@ -32,6 +32,12 @@ module ::WatchCategory
 end
 
 after_initialize do
+  DiscourseEvent.on(:groups_synced) do
+    if SiteSetting.watching_enabled
+      Sidekiq::Client.enqueue(WatchCategory::WatchCategoryJob)
+    end
+  end
+
   module ::WatchCategory
     class WatchCategoryJob < ::Jobs::Scheduled
       every 1.day
