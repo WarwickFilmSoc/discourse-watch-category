@@ -10,8 +10,8 @@ module ::WatchCategory
     groups_cats = {
       "exec" => ["exec", "shadow-exec"],
       "duty_managers" => ["duty-managers"],
-      "q_proj" => ["proj", "show-reports"],
-      "t_proj" => ["show-reports"],
+      "q_proj" => ["proj", "show-reports", "proj-meeting-minutes"],
+      "t_proj" => ["show-reports", "proj-meeting-minutes"],
       "it_team" => ["it"],
     }
 
